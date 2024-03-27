@@ -1,3 +1,7 @@
-api_id = "12606917"
-api_hash = "f25113b8c17dca6fa7abda53a86bd4f7"
-bot_token = "6556725895:AAEeQVpyqz9nWDSTnL-wSE4ey55MCLRKVx8"
+import os
+from os import environ as env
+class Telegram:
+    API_ID = int(env.get("API_ID"))
+    API_HASH = str(env.get("API_HASH"))
+    BOT_TOKEN = str(env.get("BOT_TOKEN"))
+    OWNER_ID = int(env.get('OWNER_ID', ''))
